@@ -1,7 +1,5 @@
 package tema.pkg8.ejercicio.pkg14;
-
 import java.util.Scanner;
-import static tema.pkg8.ejercicio.pkg14.Juego.metodoAs;
 
 /**
  *
