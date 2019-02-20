@@ -39,17 +39,19 @@ public class Metodos {
             return true;
         }
     }
-    
-    public static boolean compruebaGanar(char[]pal){
-        boolean ganar=false;
+
+    public static boolean compruebaGanar(char[] pal) {
+        int contguiones = 0;
         for (int i = 0; i < pal.length; i++) {
-            if(pal[i]=='_'){
-                ganar=false;
-            } else {
-                ganar=true;
+            if (pal[i] == '_') {
+                contguiones++;
             }
         }
-        return ganar;
+        if(contguiones>0){
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public static char introducirLetra() {
@@ -66,26 +68,26 @@ public class Metodos {
         int cont = 0;
         System.out.println("--COMIENZO DEL JUEGO--");
         while ((perder == false) && (ganar == false)) {
-            System.out.println("FALLOS: "+cont);
+            System.out.println("FALLOS: " + cont);
             dibujarMuneco(cont);
             mostrarVacia(pal);
             car = introducirLetra();
             if (comprobar(car, pal, palabra) == false) {
                 cont++;
             }
-            if(cont>5){
-                perder=true;
+            if (cont > 5) {
+                perder = true;
             }
-            if(compruebaGanar(pal)==true){
-                ganar=true;
+            if (compruebaGanar(pal) == true) {
+                ganar = true;
             }
         }
         return perder;
     }
-    
-    public static void dibujarMuneco(int contador){
-        switch(contador){
-            case 0:{
+
+    public static void dibujarMuneco(int contador) {
+        switch (contador) {
+            case 0: {
                 System.out.println("");
                 System.out.println("");
                 System.out.println("");
@@ -93,7 +95,7 @@ public class Metodos {
                 System.out.println("");
                 break;
             }
-            case 1:{
+            case 1: {
                 System.out.println("|");
                 System.out.println("");
                 System.out.println("|");
@@ -101,7 +103,7 @@ public class Metodos {
                 System.out.println("|");
                 break;
             }
-            case 2:{
+            case 2: {
                 System.out.println("   _ _");
                 System.out.println("|");
                 System.out.println("");
@@ -109,7 +111,7 @@ public class Metodos {
                 System.out.println("|");
                 break;
             }
-            case 3:{
+            case 3: {
                 System.out.println("   _ _");
                 System.out.println("|     |");
                 System.out.println("     O");
@@ -117,7 +119,7 @@ public class Metodos {
                 System.out.println("|");
                 break;
             }
-            case 4:{
+            case 4: {
                 System.out.println("   _ _");
                 System.out.println("|     |");
                 System.out.println("     O");
@@ -125,13 +127,13 @@ public class Metodos {
                 System.out.println("|");
                 break;
             }
-            case 5:{
-               System.out.println("   _ _");
+            case 5: {
+                System.out.println("   _ _");
                 System.out.println("|     |");
                 System.out.println("      O");
                 System.out.println("|   /||\\");
                 System.out.println("|    /\\");
-                break; 
+                break;
             }
         }
     }
