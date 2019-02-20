@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class Metodos {
 
     public static String palabraJuego() {
-        String[] palabras = {"VACA", "COCO", "PATA", "ISLA"};
-        return palabras[(int) (Math.random() * 4)];
+        String[] palabras = {"VACA", "COCO", "PATA", "ISLA","PARALELEPIPEDO","SATANAS","AVECREM","DIVORCIO","SUICIDIO","ANAL","CACHIBACHE","PERGANTINA","CIMBORRIO","PENCOHUEVO","JORDI","PENDEJO","SUPERCALIFRAGILISTICOESPIALIDOSO","CODIGO","SERPENTINO","VARIABLE","CHORIZO","CANTAMAÑANAS"};
+        return palabras[(int) (Math.random() * palabras.length)];
     }
 
     public static void rellenarPalabra(char[] pal) {
